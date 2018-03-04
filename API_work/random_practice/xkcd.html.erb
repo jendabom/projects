@@ -1,0 +1,11 @@
+<body>
+<% require 'unirest' %>
+
+
+<% num = 613 %>
+
+<% response = Unirest.get("https://xkcd.com/#{num}/info.0.json") %>
+
+
+<% p "#{response.body["transcript"]}" %>
+</body>
